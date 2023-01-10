@@ -1,9 +1,7 @@
 import dicom2nifti
-import os
+import os, sys, glob, csv
 import tkinter as tk
 from tkinter import filedialog
-
-import os, sys, glob, csv
 
 def locateFolder():
     root = tk.Tk()
