@@ -6,7 +6,6 @@ from tkinter import filedialog
 def locateFolder():
     root = tk.Tk()
     root.withdraw()
-
     folder_path = filedialog.askdirectory()
     return folder_path
 
@@ -56,5 +55,5 @@ def folderNav(folder_path):
 if __name__ == "__main__":
     path_to_all_patients = locateFolder()
     patients_folders = os.listdir(path_to_all_patients)
-    for patients in patients_folder:
+    for patients in patients_folders:
         dicom2nifti.convert_directory(os.path.join(path_to_all_patients, patient), os.path.join(path_to_all_patients, patient, ".nii.gz"))
