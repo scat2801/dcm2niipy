@@ -56,4 +56,4 @@ if __name__ == "__main__":
     path_to_all_patients = locateFolder()
     patients_folders = os.listdir(path_to_all_patients)
     for patient in patients_folders:
-        dicom2nifti.convert_directory(os.path.join(path_to_all_patients, patient), os.path.join(path_to_all_patients, patient, ".nii.gz"))
+        dicom2nifti.convert_directory(os.path.join(path_to_all_patients, patient), os.path.join(path_to_all_patients))
